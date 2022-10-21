@@ -52,6 +52,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      metadata: [{ name: "keywords", content: "frontend, web, data-science" }],
       navbar: {
         title: "Home",
         logo: {
