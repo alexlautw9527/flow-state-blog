@@ -52,7 +52,14 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      metadata: [{ name: "keywords", content: "frontend, web, data-science" }],
+      metadata: [
+        { name: "keywords", content: "frontend, web, data-science" },
+        {
+          name: "google-site-verification",
+          content: "EjIsbIoj2_doB-3ERxxPkkkDPmaP3gsHPP7TAgetcls",
+        },
+      ],
+
       image: "img/og_img.png",
       navbar: {
         title: "Home",
