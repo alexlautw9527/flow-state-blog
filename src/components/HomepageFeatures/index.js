@@ -59,6 +59,20 @@ function Feature({ img, title, description }) {
   );
 }
 
+function howMuchILoveYou(nbPetals) {
+  const phraseArr = [
+    "I love you",
+    "a little",
+    "a lot",
+    "passionately",
+    "madly",
+    "not at all",
+  ];
+  const index =
+    (nbPetals > 6 ? (nbPetals % 6 === 0 ? 6 : nbPetals % 6) : nbPetals) - 1;
+  return phraseArr[index];
+}
+
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>

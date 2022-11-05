@@ -2,7 +2,6 @@
 title: 從理解到實作 React-beautiful-dnd
 date: 2022-10-07 10:23:58
 tags: [react, dnd]
-categories: react
 toc: true
 ---
 
