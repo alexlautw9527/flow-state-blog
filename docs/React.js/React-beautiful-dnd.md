@@ -125,6 +125,12 @@ const [items, setItems] = useState(["A", "B", "C"]);
 2.  這個函數要 return 出一個 react element ，自行給定 `div` 作為卡片的容器，裡面塞入實際卡片內容，且可自定樣式
 3.  這個容器 `div` 需要給定 `ref={provided.innerRef} {...provided.draggableProps {...provided.dragHandleProps}` 這些 props，藉此讓自行給定的`div`可以運作套件功能
 
+<iframe src="https://codesandbox.io/embed/very-basic-react-dnd-05hdgd?fontsize=14&hidenavigation=1&theme=dark"
+     title="very-basic-react-dnd"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
 一開始先不加任何樣式，專注在最簡單的範例實現，如此一來 A、B、C 可以拖曳了，但是拖曳完並不會確實更新，還是會回到原來順序
 
 因為後續需要給定 `onDragStart`, `onDragUpdate`, `onDragEnd` (必填)來決定拖曳生命週期的事件函數 (Responders)
