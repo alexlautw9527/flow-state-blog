@@ -16,6 +16,7 @@ toc: true
 - 讓 Prettier 跟 ESlint 不要打架
 - VS code 設定檔
 - 一鍵搞定程式碼排版與風格
+- (加碼) tailwind 與其 Prettier plugin 設定
 
 ## 事前準備
 
@@ -119,6 +120,7 @@ npm install --save-dev eslint-config-prettier
 ```
 
 `eslint-plugin-prettier` : 把 Prettier 排版的方式，變成 ESlint 的 rules
+
 `eslint-config-prettier` : 關掉 ESLint 可能會跟 Prettier 衝突的 rules
 
 ## 實作開始！
@@ -163,6 +165,8 @@ npm install --save-dev eslint-config-prettier
   - airbnb 預設 `.jsx` 才能使用 `jsx` 語法，但這樣有點太嚴格了，設定 `.js` 也可以使用 `jsx` 語法
 
 ### `.prettierrc`
+
+[詳細官方文件](https://prettier.io/docs/en/options.html)
 
 設置 Prettier 的排版方式
 
