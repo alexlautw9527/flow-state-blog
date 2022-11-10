@@ -7,7 +7,7 @@ toc: true
 
 ## 前言
 
-一般在 react-hook-form 的範例中，通常在 native inputs 直接使用 `register` 函數所生成 props 來讓套件擁有 input 的掌控權，進一步有了表單驗證的功能
+react-hook-form 的範例中，大多以 native input 直接使用 `register` 函數，來讓套件擁有 input 的掌控權，進一步有了表單驗證的功能
 
 ```jsx
 const { onChange, onBlur, name, ref } = register('firstName');
@@ -23,20 +23,22 @@ const { onChange, onBlur, name, ref } = register('firstName');
 <input {...register('firstName')} />
 ```
 
-不過，如果使用 Chakra UI 或是 MUI 這些 UI 元件庫，元件都包得像是俄羅斯娃娃，直接使用 `register` 可能沒辦法讓套件這麼「深入控制」
+不過，如果使用 Chakra UI 或是 MUI 這些 UI 元件庫，元件都包得像是俄羅斯娃娃，直接使用 `register` 通常沒辦法讓套件「深入控制」
 
-尤其要驗證 date picker 或是 slider 這類元件的 value，就要出動 `Controller` 功能了，這次會以 MUI 作為範例
+尤其要驗證 date picker 或是 slider 這類元件的 value，就更需要出動 `Controller` 功能了
+
+這次會以 MUI 作為範例
 
 ## 預備知識
 
 - [react-hook-form 基本使用](https://react-hook-form.com/get-started)
 - [MUI 基本使用](https://mui.com/material-ui/getting-started/usage/)
 
-## `Controller` 基本架構
+## `Controller` 基本 props 架構
 
-`control` : 從 `const { handleSubmit, control } = useForm()` 而來，傳入 `Controller` 當中讓套件
+`control` : 從 `const { handleSubmit, control } = useForm()` 而來，並傳入 `Controller` 當中，讓套件擁有擁有掌握權來驗證 value
 
-`name` : 該 input 的 unique name，如果要讓其他 input 取得其他 input 的值來驗證時，特別好用 (檢查密碼與確認密碼是否相符)
+`name` : 該 input 的 unique name，如果要讓其他 input 取得另一個 input 的值來驗證時，特別好用 (檢查密碼與確認密碼是否相符)
 
 `rules` : 驗證規則，從基本的非空值到 Regex，甚至是 custom function 都可以，先詳見[官方文件](https://react-hook-form.com/api/useform/register#main)
 
@@ -68,7 +70,7 @@ const { onChange, onBlur, name, ref } = register('firstName');
 
 ## `Controller` render
 
-在 `Controller` 的 render 會傳入套件設定好的 prop 來渲染我們要用的元件，以下介紹比較重要的部分
+在 `Controller` 的 render 會傳入套件設定好的 prop 來渲染要用的元件，以下介紹比較重要的部分
 
 - `field`
   - input value 的 state 跟 set State 都會由 react-hook-form 幫你做
@@ -93,7 +95,7 @@ const { onChange, onBlur, name, ref } = register('firstName');
 />
 ```
 
-有時候不是什麼資訊都會全部用上，就會如上面的範例，只取需要的部份運用
+有時候不是什麼資訊都會全部用上，就會如上面的範例，可以只取需要的部份運用
 
 ```jsx
 render={({ field, fieldState: { error } }) => (
