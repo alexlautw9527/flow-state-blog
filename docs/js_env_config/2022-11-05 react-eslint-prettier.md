@@ -129,6 +129,8 @@ npm install --save-dev eslint-config-prettier
 
 ### `.eslintrc.json`
 
+在專案根目錄新增一個 `.eslintrc.json`
+
 ```json
 // .eslintrc.json
 {
@@ -166,9 +168,9 @@ npm install --save-dev eslint-config-prettier
 
 ### `.prettierrc`
 
-[詳細官方文件](https://prettier.io/docs/en/options.html)
+在專案根目錄新增一個 `.prettierrc`，設置 Prettier 的排版方式
 
-設置 Prettier 的排版方式
+[詳細官方文件](https://prettier.io/docs/en/options.html)
 
 ```json
 {
@@ -186,6 +188,8 @@ npm install --save-dev eslint-config-prettier
 - `trailingComma`: `"es5"` 會幫你在每個 object 或 array 最後一個 property (or element) 自動加上`,`
 
 ### `.vscode/settings.json`
+
+在專案根目錄新增一個資料夾 `.vscode`，並在底下新增 `settings.json`
 
 ```json
 // settings.json
