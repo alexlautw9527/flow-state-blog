@@ -18,14 +18,14 @@ toc: true
 瀏覽器可以分成三大塊
 
 1. Javascript 引擎
-   - Stack : 沒錯，就是前一篇講的 Stack
-   - Heap : 變數、函數等等存放的記憶體空間
+   - `Stack` : 沒錯，就是前一篇講的 Stack
+   - `Heap` : 變數、函數等等存放的記憶體空間
 2. Web API
    - 其實這些東西都不包含在 JS 引擎裡面，而是瀏覽器內部的 API，例如：
-   - onClick 事件
-   - ajax : 發出非同步請求
-   - setTimeOut : 計時器
-3. Callback Queue ( 或稱 Event Queue )
+   - `onClick` 事件
+   - `ajax` : 發出非同步請求
+   - `setTimeOut` : 計時器
+3. `Callback Queue` ( 或稱 `Event Queue` )
 
 ## 範例 1
 
@@ -49,7 +49,7 @@ console.log("This is second one");
    - **先移交給 Web API 開始計時** ( 此時還不會執行裡面的 callback function )
 3. 程式碼碰到 `console.log("This is second one")` 放進 Call Stack，執行並 pop off
 4. 5 秒到了，把 `setTimeout` 裡面的 callback 放到 Queue
-5. Stack 清空了，好的，可以把 Queue 裡面的任務放進去 Stack 繼續執行了，執行 `console.log("Time is out")`
+5. Stack 清空了？好的，可以把 Queue 裡面的任務放進去 Stack 繼續執行了，執行 `console.log("Time is out")`
 
 ## 範例 2: 真正理解 Event Loop
 
