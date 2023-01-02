@@ -1,8 +1,7 @@
 ---
-title: "理解 Event Loop - 先談 Execution Context 和 Call Stack"
-
+title: "理解 Event Loop (一) - 先談 Execution Context 和 Call Stack"
 date: 2023-01-03 13:43:00
-tags: [javascript, "Event loop", "Execution Context", Stack]
+tags: [javascript, "Event Loop", "Execution Context", Stack]
 toc: true
 ---
 
@@ -14,9 +13,11 @@ toc: true
 
 Javascript 是 **單執行緒** 的語言，意思是每次只做一件事。但是在網頁許多互動功能，都會關係到「非同步」行為，例如：呼叫 API、`setTimeOut` 計時，若執行太久會形成 **blocking** ，後續的程序都被卡住不能執行，導致使用體驗不佳
 
-Event Loop 就是要解決這樣的問題，調和「同步」、與「非同步」，白話來說，會先讓同步的程式碼執行完，再來執行非同步
+Event Loop 就是要解決這樣的問題，調和「同步」與「非同步」
 
-以實際運作機制來看，Event Loop 是一個司令，不斷檢查 `Call Stack` 是不是空的，若已被清空，再來開始執行 `Event Queue`
+白話來說，會優先處理**同步**的程式碼，**非同步**則轉移瀏覽器 Web API 處理，等到**同步**的部分都已完成，再來繼續收尾**非同步**的程序
+
+以實際運作機制來看，Event Loop 是一個司令，不斷檢查 `Call Stack` 是不是空的，若已被清空，再來開始 `Event Queue` 的東西塞到 `Stack`
 
 但談到 `Call Stack`，又要談到 `Execution Context` 了
 
