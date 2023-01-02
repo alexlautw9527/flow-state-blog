@@ -31,7 +31,7 @@ const config = {
     [
       "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
@@ -45,7 +45,17 @@ const config = {
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
-      }),
+        sitemap: {
+          changefreq: "daily",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
+        },
+        // googleAnalytics: {
+        //   trackingID: 'UA-141789564-1',
+        //   anonymizeIP: true,
+        // }ㄎ
+      },
     ],
   ],
 
