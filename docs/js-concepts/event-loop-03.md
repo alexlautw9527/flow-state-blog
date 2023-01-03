@@ -1,7 +1,7 @@
 ---
 title: "理解 Event Loop (三) - Macro & Micro"
-date: 2023-01-03 13:43:00
-tags: [javascript, "Event Loop"]
+date: 2023-01-02 13:43:00
+tags: [JavaScript, "Event Loop"]
 toc: true
 ---
 
@@ -11,7 +11,7 @@ Micro Task 跟 Macro Task 是 Event Loop 的最後一塊拼圖，我們可以將
 
 **宏任務 Macro Task**
 
-- **script ( Javascript 整體程式碼 )**
+- **script ( JavaScript 整體程式碼 )**
 - `setTimeout`
 - `setInterval`
 - `setImmediate`
@@ -109,4 +109,4 @@ console.log(7);
 
 [Tasks, microtasks, queues and schedules](https://jakearchibald.com/2015/tasks-microtasks-queues-and-schedules/)
 
-[淺談 JavaScript 中的 Event Queue、Event Table、Event Loop 以及 Event Task](https://israynotarray.com/javascript/20211116/1549480598/)
+[淺談 JavaScript 中的 Event Queue、Event Table、Event Loop 以及 Event Task](https://israynotarray.com/JavaScript/20211116/1549480598/)

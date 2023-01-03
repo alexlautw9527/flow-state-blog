@@ -41,7 +41,7 @@ npm install eslint --save-dev
 
 ## Airbnb Style
 
-現在 Javascript 的程式碼主流規範有 Airbnb、Google、以及 JavaScript Standard Style，而 Airbnb 在近期比較火熱，也嚴謹很多
+現在 JavaScript 的程式碼主流規範有 Airbnb、Google、以及 JavaScript Standard Style，而 Airbnb 在近期比較火熱，也嚴謹很多
 
 想起剛安裝的時候，在編輯器上的畫面滿滿紅蚯蚓，原來我的程式碼是好肥沃的田...
 

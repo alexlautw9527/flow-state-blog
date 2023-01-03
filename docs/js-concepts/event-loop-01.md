@@ -1,7 +1,7 @@
 ---
 title: "理解 Event Loop (一) - 先談 Execution Context 和 Call Stack"
-date: 2023-01-03 13:43:00
-tags: [javascript, "Event Loop", "Execution Context", Stack]
+date: 2023-01-02 13:43:00
+tags: [JavaScript, "Event Loop", "Execution Context", Stack]
 toc: true
 ---
 
@@ -11,7 +11,7 @@ toc: true
 
 ## 前言
 
-Javascript 是 **單執行緒** 的語言，意思是每次只做一件事。但是在網頁許多互動功能，都會關係到「非同步」行為，例如：呼叫 API、`setTimeOut` 計時，若執行太久會形成 **blocking** ，後續的程序都被卡住不能執行，導致使用體驗不佳
+JavaScript 是 **單執行緒** 的語言，意思是每次只做一件事。但是在網頁許多互動功能，都會關係到「非同步」行為，例如：呼叫 API、`setTimeOut` 計時，若執行太久會形成 **blocking** ，後續的程序都被卡住不能執行，導致使用體驗不佳
 
 Event Loop 就是要解決這樣的問題，調和「同步」與「非同步」
 
@@ -25,7 +25,7 @@ Event Loop 就是要解決這樣的問題，調和「同步」與「非同步」
 
 Execution Context 的主要類型 :
 
-1. Global Execution Context (每個 Javascript 程式檔只會有一個)
+1. Global Execution Context (每個 JavaScript 程式檔只會有一個)
 2. Functional Execution Context (執行函數時會建立)
 
 其實 Execution Context 像是沙盒一般，每個 Context 每個都有獨立自主的環境
@@ -34,7 +34,7 @@ Execution Context 的主要類型 :
 
 ### Global Execution Context
 
-一開始瀏覽器執行 Javascript 時，首要的預設執行環境，其中又分成兩階段
+一開始瀏覽器執行 JavaScript 時，首要的預設執行環境，其中又分成兩階段
 
 1. 創造階段
 2. 執行階段
@@ -141,6 +141,6 @@ openBox3();
 [JS 原力覺醒 Day03 - 執行環境與執行堆疊
 ](https://ithelp.ithome.com.tw/articles/10216450)
 
-[透過程式範例，熟悉 JS 執行流程的關鍵：Event Loop](https://www.programfarmer.com/articles/javaScript/javascript-browser-event-loop)
+[透過程式範例，熟悉 JS 執行流程的關鍵：Event Loop](https://www.programfarmer.com/articles/JavaScript/JavaScript-browser-event-loop)
 
-[JavaScript: Call Stack Explained](https://javascript.plainenglish.io/node-call-stack-explained-fd9df1c49d2e)
+[JavaScript: Call Stack Explained](https://JavaScript.plainenglish.io/node-call-stack-explained-fd9df1c49d2e)

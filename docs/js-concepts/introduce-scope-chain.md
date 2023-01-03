@@ -2,7 +2,7 @@
 title: "掌握 Scope Chain，避開變數 not defined"
 
 date: 2023-01-03 13:43:00
-tags: [javascript, "Scope chain"]
+tags: [JavaScript, "Scope chain"]
 toc: true
 ---
 

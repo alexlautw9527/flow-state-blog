@@ -1,7 +1,7 @@
 ---
 title: "理解 Event Loop (二) - 來講真正的 Event Loop"
-date: 2023-01-03 13:43:00
-tags: [javascript, "Event Loop", "Execution Context", Stack]
+date: 2023-01-02 13:43:00
+tags: [JavaScript, "Event Loop", "Execution Context", Stack]
 toc: true
 ---
 
@@ -17,7 +17,7 @@ toc: true
 
 瀏覽器可以分成三大塊
 
-1. Javascript 引擎
+1. JavaScript 引擎
    - `Stack` : 沒錯，就是前一篇講的 Stack
    - `Heap` : 變數、函數等等存放的記憶體空間
 2. Web API
